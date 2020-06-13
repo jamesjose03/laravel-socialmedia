@@ -21,6 +21,8 @@ class UserController extends Controller
         $user->password = $password;
 
         $user->save();
+
+        Auth::login($user);
         return redirect()->route('dashboard');
     }
     public function postSignIn(Request $request) {
