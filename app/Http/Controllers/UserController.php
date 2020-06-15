@@ -8,10 +8,6 @@ use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
-    public function getDashboard() {
-        return view('dashboard');
-    }
-
     public function postSignUp(Request $request) {
         $validator = Validator::make($request->all(), [
             'email' => 'required|unique:users|email',

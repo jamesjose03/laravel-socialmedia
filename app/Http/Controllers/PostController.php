@@ -10,6 +10,10 @@ use Illuminate\Support\Facades\Validator;
 
 class PostController extends Controller
 {
+    public function getDashboard() {
+        $posts = Post::all();
+        return view('dashboard', ['posts'=> $posts]);
+    }
     public function postCreatePost(Request $request) {
         $validator = Validator::make($request->all(), [
             'body' => 'required|max:1000',
