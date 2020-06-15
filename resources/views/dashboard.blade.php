@@ -5,11 +5,12 @@
 <section class = "row new-post">
     <div class="col-md-6 col-md-offset-3">
         <header><h2>Write a new post...</h2></header>
-        <form action="">
+        <form action="{{ route('post.create') }}" method="post">
             <div class="form-group">
-                <textarea class="form-control" name="new-post" id="new-post" rows="5" placeholder="Type here"></textarea>
+                <textarea class="form-control" name="body" id="new-post" rows="5" placeholder="Type here"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Post</button>
+            <input type="hidden" name="_token" value="{{ Session::token() }}">
         </form>
     </div>
 </section>
