@@ -3,6 +3,10 @@
     border-bottom: 1px solid #ccc;
 }
 
+h1 {
+    padding-top: 50px;
+}
+
 .new-post header,
 .posts header {
     margin-bottom: 20px;

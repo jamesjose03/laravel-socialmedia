@@ -6,9 +6,12 @@ Welcome!
 
 @section('content')
     @include('includes.message-block')
+    <h1>Welcome to my Social Media!</h1>
+    <h5>Login or Signup Below to share your thoughts!</h5>
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
             <h2>Sign Up</h2>
+            <p>Don't have an account? Sign Up here...</p>
             <form action="{{ route('signup') }}" method="post">
                 <div class="form-group {{ $errors->has('email')?'is-invalid':'' }}">
                     <label for="email">Email</label>
@@ -28,6 +31,7 @@ Welcome!
         </div>
         <div class="col-6">
             <h2>Sign In</h2>
+            <p>Have an account? Sign In here...</p>
             <form action="{{ route('signin') }}" method="post">
                 <div class="form-group">
                     <label for="email">Email</label>
